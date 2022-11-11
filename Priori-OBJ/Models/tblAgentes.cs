@@ -15,6 +15,7 @@ namespace Priori_OBJ.Models
         public DateTime data_contratacao { get; set; }
         public DateTime data_demissao { get; set; }
         public string estado { get; set; }
-        
+        public virtual ICollection<tblClientes> cliente { get; set; }
+
     }
 }

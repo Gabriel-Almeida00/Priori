@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace ControleFinanceiro.BLL.Models
+namespace Priori_OBJ.Models
 {
     public class Funcao : IdentityRole<string>
     {

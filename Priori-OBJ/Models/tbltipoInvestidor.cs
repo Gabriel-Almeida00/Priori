@@ -8,6 +8,7 @@ namespace Priori_OBJ.Models
     {
         public int id_tipoinvestidor { get; set; }
         public string nome_categoria { get; set; }
-        public string descricao_categoris { get; set; }
+        public string descricao_categoria { get; set; }
+        public virtual ICollection<tblInvestimentos> investimento { get; set; }
     }
 }

@@ -1,0 +1,16 @@
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\bin\Debug\netcoreapp3.1\Priori-DADOS.deps.json
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\bin\Debug\netcoreapp3.1\Priori-DADOS.runtimeconfig.json
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\bin\Debug\netcoreapp3.1\Priori-DADOS.runtimeconfig.dev.json
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\bin\Debug\netcoreapp3.1\Priori-DADOS.dll
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\bin\Debug\netcoreapp3.1\Priori-DADOS.pdb
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\bin\Debug\netcoreapp3.1\Priori-OBJ.dll
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\bin\Debug\netcoreapp3.1\Priori-OBJ.pdb
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\obj\Debug\netcoreapp3.1\Priori-DADOS.csproj.AssemblyReference.cache
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\obj\Debug\netcoreapp3.1\Priori-DADOS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\obj\Debug\netcoreapp3.1\Priori-DADOS.AssemblyInfoInputs.cache
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\obj\Debug\netcoreapp3.1\Priori-DADOS.AssemblyInfo.cs
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\obj\Debug\netcoreapp3.1\Priori-DADOS.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\obj\Debug\netcoreapp3.1\Priori-DADOS.csproj.CopyComplete
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\obj\Debug\netcoreapp3.1\Priori-DADOS.dll
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\obj\Debug\netcoreapp3.1\Priori-DADOS.pdb
+C:\Users\Gabriel\Desktop\Priori\Priori-DADOS\obj\Debug\netcoreapp3.1\Priori-DADOS.genruntimeconfig.cache

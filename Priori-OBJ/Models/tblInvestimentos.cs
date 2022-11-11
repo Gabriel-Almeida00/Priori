@@ -7,8 +7,11 @@ namespace Priori_OBJ.Models
     public  class tblInvestimentos
     {
         public int id_investimento { get; set; }
-        public int id_tipoinvestidor { get; set; }
+        public int id_tipoInvestidor { get; set; }
         public tbltipoInvestidor tbltipoInvestidor { get; set; }
+
+        public int id_carteira { get; set; } 
+         public tblCarteiraInvestimentos carteira { get; set; }
         public int nome { get; set; }
         public string tipo_investimento { get; set; }
         public string rentabilidade { get; set; }

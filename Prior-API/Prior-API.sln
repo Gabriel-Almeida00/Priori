@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Priori-API", "Prior-API\Priori-API.csproj", "{80331E20-7703-4913-97A2-7F7F0D68D893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Priori-API", "Prior-API\Priori-API.csproj", "{80331E20-7703-4913-97A2-7F7F0D68D893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Priori-OBJ", "..\Priori-OBJ\Priori-OBJ.csproj", "{0F296961-181D-4AEF-97C7-45D8059867A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Priori-DADOS", "..\Priori-DADOS\Priori-DADOS.csproj", "{EC54BB90-A285-4963-8D08-E0D9350AAB0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{80331E20-7703-4913-97A2-7F7F0D68D893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80331E20-7703-4913-97A2-7F7F0D68D893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80331E20-7703-4913-97A2-7F7F0D68D893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F296961-181D-4AEF-97C7-45D8059867A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F296961-181D-4AEF-97C7-45D8059867A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F296961-181D-4AEF-97C7-45D8059867A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F296961-181D-4AEF-97C7-45D8059867A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC54BB90-A285-4963-8D08-E0D9350AAB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC54BB90-A285-4963-8D08-E0D9350AAB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC54BB90-A285-4963-8D08-E0D9350AAB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC54BB90-A285-4963-8D08-E0D9350AAB0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
