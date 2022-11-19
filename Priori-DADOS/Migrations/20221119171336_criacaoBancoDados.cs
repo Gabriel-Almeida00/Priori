@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Priori_DADOS.Migrations
 {
-    public partial class criacaoBancodados : Migration
+    public partial class criacaoBancoDados : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,20 +26,19 @@ namespace Priori_DADOS.Migrations
                 name: "tblAgente",
                 columns: table => new
                 {
-                    id_agente = table.Column<int>(nullable: false)
+                    agente_id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     nome = table.Column<string>(maxLength: 50, nullable: false),
-                    cpf = table.Column<decimal>(type: "decimal(5,2", nullable: false),
-                    email = table.Column<string>(maxLength: 35, nullable: false),
+                    cpf = table.Column<string>(nullable: false),
                     telefone = table.Column<string>(maxLength: 15, nullable: false),
-                    salario = table.Column<decimal>(type: "decimal(5,2", nullable: false),
+                    salario = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     data_contratacao = table.Column<DateTime>(maxLength: 15, nullable: false),
                     data_demissao = table.Column<DateTime>(maxLength: 15, nullable: false),
                     estado = table.Column<string>(maxLength: 15, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_tblAgente", x => x.id_agente);
+                    table.PrimaryKey("PK_tblAgente", x => x.agente_id);
                 });
 
             migrationBuilder.CreateTable(
@@ -100,8 +99,8 @@ namespace Priori_DADOS.Migrations
                     id_tipoinvestidor = table.Column<int>(nullable: false),
                     tipoInvestidorid_tipoinvestidor = table.Column<int>(nullable: true),
                     id_agente = table.Column<int>(nullable: false),
-                    cpf = table.Column<decimal>(type: "decimal(5,2", maxLength: 15, nullable: false),
-                    email = table.Column<string>(maxLength: 30, nullable: false),
+                    cpf = table.Column<string>(maxLength: 15, nullable: false),
+                    emailCliente = table.Column<string>(maxLength: 30, nullable: false),
                     senha = table.Column<string>(maxLength: 15, nullable: false),
                     endereco = table.Column<string>(nullable: true),
                     telefone = table.Column<string>(maxLength: 15, nullable: false),
@@ -115,7 +114,7 @@ namespace Priori_DADOS.Migrations
                         name: "FK_tblClientes_tblAgente_id_agente",
                         column: x => x.id_agente,
                         principalTable: "tblAgente",
-                        principalColumn: "id_agente");
+                        principalColumn: "agente_id");
                     table.ForeignKey(
                         name: "FK_tblClientes_tblTipoInvestidor_tipoInvestidorid_tipoinvestidor",
                         column: x => x.tipoInvestidorid_tipoinvestidor,
@@ -218,10 +217,10 @@ namespace Priori_DADOS.Migrations
                     id_cliente = table.Column<string>(nullable: false),
                     id_investimento = table.Column<int>(nullable: false),
                     data_efetuacao = table.Column<DateTime>(maxLength: 50, nullable: false),
-                    valor_aplicado = table.Column<decimal>(type: "decimal(5,2", nullable: false),
+                    valor_aplicado = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     tempo_aplicacao = table.Column<int>(maxLength: 35, nullable: false),
                     duracao = table.Column<DateTime>(maxLength: 15, nullable: false),
-                    saldo = table.Column<decimal>(type: "decimal(5,2", maxLength: 15, nullable: false)
+                    saldo = table.Column<decimal>(type: "decimal(5,2)", maxLength: 15, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -244,7 +243,7 @@ namespace Priori_DADOS.Migrations
                     nome = table.Column<int>(maxLength: 50, nullable: false),
                     tipo_investimento = table.Column<string>(maxLength: 15, nullable: false),
                     rentabilidade = table.Column<string>(maxLength: 15, nullable: false),
-                    valor_minimo = table.Column<decimal>(type: "decimal(5,2", maxLength: 15, nullable: false),
+                    valor_minimo = table.Column<decimal>(type: "decimal(5,2)", maxLength: 15, nullable: false),
                     tempo_minimo = table.Column<int>(maxLength: 15, nullable: false),
                     descricao = table.Column<string>(maxLength: 35, nullable: false)
                 },
@@ -266,17 +265,17 @@ namespace Priori_DADOS.Migrations
             migrationBuilder.InsertData(
                 table: "Funcoes",
                 columns: new[] { "Id", "ConcurrencyStamp", "Descricao", "Name", "NormalizedName" },
-                values: new object[] { "ba4e20f5-cebe-43db-b59d-b4d4bec1eb5a", "7fb6714d-0e4e-4d32-a4ba-cdcaeaabe201", "Administrador do sistema", "Administrador", "ADMINISTRADOR" });
+                values: new object[] { "8991b961-c19d-47db-b730-e5c2fbfdd22f", "0948e857-878e-426b-a098-b1b1cccdaafc", "Administrador do sistema", "Administrador", "ADMINISTRADOR" });
 
             migrationBuilder.InsertData(
                 table: "Funcoes",
                 columns: new[] { "Id", "ConcurrencyStamp", "Descricao", "Name", "NormalizedName" },
-                values: new object[] { "9351018d-e148-46d9-aa2d-5f743024715c", "279ded7a-8c98-417a-afa3-49ab0a9dace7", "Usuário do sistema", "Usuario", "USUARIO" });
+                values: new object[] { "f2916251-d70f-4c28-b0aa-cc2601010280", "027ffdf5-95b2-4a04-b8b6-f7c849003ef9", "Usuário do sistema", "Usuario", "USUARIO" });
 
             migrationBuilder.InsertData(
                 table: "Funcoes",
                 columns: new[] { "Id", "ConcurrencyStamp", "Descricao", "Name", "NormalizedName" },
-                values: new object[] { "b49118f1-89a9-4843-9b0f-7067f182d00b", "fd13a8dc-32ce-4577-b2fd-d69080e048c0", "Agente do sistema", "Agente", "USUARIO" });
+                values: new object[] { "a37c07f3-4669-431c-9d09-fff31016eea8", "725a69e3-1d6d-4f26-a69c-ef10a8353fb4", "Agente do sistema", "Agente", "AGENTE" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

@@ -13,8 +13,8 @@ namespace Priori_OBJ.Models
         public virtual ICollection<tblCarteiraInvestimentos> CarteiraInvestimentos { get; set; }
         public int id_agente { get; set; }
         public tblAgentes agente { get; set; }
-        public Decimal cpf { get; set; }
-        public string email { get; set; }
+        public string cpf { get; set; }
+        public string emailCliente { get; set; }
         public string senha { get; set; }
         public string endereco { get; set; }
         public string telefone { get; set; }

@@ -158,39 +158,40 @@ namespace Priori_DADOS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ba4e20f5-cebe-43db-b59d-b4d4bec1eb5a",
-                            ConcurrencyStamp = "7fb6714d-0e4e-4d32-a4ba-cdcaeaabe201",
+                            Id = "8991b961-c19d-47db-b730-e5c2fbfdd22f",
+                            ConcurrencyStamp = "0948e857-878e-426b-a098-b1b1cccdaafc",
                             Descricao = "Administrador do sistema",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "9351018d-e148-46d9-aa2d-5f743024715c",
-                            ConcurrencyStamp = "279ded7a-8c98-417a-afa3-49ab0a9dace7",
+                            Id = "f2916251-d70f-4c28-b0aa-cc2601010280",
+                            ConcurrencyStamp = "027ffdf5-95b2-4a04-b8b6-f7c849003ef9",
                             Descricao = "Usuário do sistema",
                             Name = "Usuario",
                             NormalizedName = "USUARIO"
                         },
                         new
                         {
-                            Id = "b49118f1-89a9-4843-9b0f-7067f182d00b",
-                            ConcurrencyStamp = "fd13a8dc-32ce-4577-b2fd-d69080e048c0",
+                            Id = "a37c07f3-4669-431c-9d09-fff31016eea8",
+                            ConcurrencyStamp = "725a69e3-1d6d-4f26-a69c-ef10a8353fb4",
                             Descricao = "Agente do sistema",
                             Name = "Agente",
-                            NormalizedName = "USUARIO"
+                            NormalizedName = "AGENTE"
                         });
                 });
 
             modelBuilder.Entity("Priori_OBJ.Models.tblAgentes", b =>
                 {
-                    b.Property<int>("id_agente")
+                    b.Property<int>("agente_id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<decimal>("cpf")
-                        .HasColumnType("decimal(5,2");
+                    b.Property<string>("cpf")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("data_contratacao")
                         .HasColumnType("datetime2")
@@ -199,11 +200,6 @@ namespace Priori_DADOS.Migrations
                     b.Property<DateTime>("data_demissao")
                         .HasColumnType("datetime2")
                         .HasMaxLength(15);
-
-                    b.Property<string>("email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(35)")
-                        .HasMaxLength(35);
 
                     b.Property<string>("estado")
                         .IsRequired()
@@ -216,14 +212,14 @@ namespace Priori_DADOS.Migrations
                         .HasMaxLength(50);
 
                     b.Property<decimal>("salario")
-                        .HasColumnType("decimal(5,2");
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<string>("telefone")
                         .IsRequired()
                         .HasColumnType("nvarchar(15)")
                         .HasMaxLength(15);
 
-                    b.HasKey("id_agente");
+                    b.HasKey("agente_id");
 
                     b.ToTable("tblAgente");
                 });
@@ -251,7 +247,7 @@ namespace Priori_DADOS.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("saldo")
-                        .HasColumnType("decimal(5,2")
+                        .HasColumnType("decimal(5,2)")
                         .HasMaxLength(15);
 
                     b.Property<int>("tempo_aplicacao")
@@ -259,7 +255,7 @@ namespace Priori_DADOS.Migrations
                         .HasMaxLength(35);
 
                     b.Property<decimal>("valor_aplicado")
-                        .HasColumnType("decimal(5,2");
+                        .HasColumnType("decimal(5,2)");
 
                     b.HasKey("id_carteira");
 
@@ -321,15 +317,16 @@ namespace Priori_DADOS.Migrations
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
-                    b.Property<decimal>("cpf")
-                        .HasColumnType("decimal(5,2")
+                    b.Property<string>("cpf")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(15)")
                         .HasMaxLength(15);
 
                     b.Property<DateTime>("data_adesao")
                         .HasColumnType("datetime2")
                         .HasMaxLength(15);
 
-                    b.Property<string>("email")
+                    b.Property<string>("emailCliente")
                         .IsRequired()
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
@@ -420,7 +417,7 @@ namespace Priori_DADOS.Migrations
                         .HasMaxLength(15);
 
                     b.Property<decimal>("valor_minimo")
-                        .HasColumnType("decimal(5,2")
+                        .HasColumnType("decimal(5,2)")
                         .HasMaxLength(15);
 
                     b.HasKey("id_investimento");

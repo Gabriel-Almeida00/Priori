@@ -36,7 +36,7 @@ namespace Priori_DADOS.Mapeamentos
                  {
                      Id = Guid.NewGuid().ToString(),
                      Name = "Agente",
-                     NormalizedName = "USUARIO",
+                     NormalizedName = "AGENTE",
                      Descricao = "Agente do sistema"
                  });
 

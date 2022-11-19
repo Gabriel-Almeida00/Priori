@@ -17,7 +17,7 @@ namespace Priori_DADOS.Mapeamentos
             builder.Property(c => c.rentabilidade).IsRequired().HasMaxLength(15);
             builder.Property(c => c.descricao).IsRequired().HasMaxLength(35);
             builder.Property(c => c.tempo_minimo).IsRequired().HasMaxLength(15);
-            builder.Property(c => c.valor_minimo).HasColumnType("decimal(5,2").IsRequired().HasMaxLength(15);
+            builder.Property(c => c.valor_minimo).HasColumnType("decimal(5,2)").IsRequired().HasMaxLength(15);
             builder.Property(c => c.tipo_investimento).IsRequired().HasMaxLength(15);
 
             builder.HasOne(c => c.tbltipoInvestidor).WithMany(c => c.investimento).HasForeignKey(c => c.id_tipoInvestidor).IsRequired().OnDelete(DeleteBehavior.NoAction); 

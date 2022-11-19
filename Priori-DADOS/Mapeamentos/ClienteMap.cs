@@ -14,9 +14,9 @@ namespace Priori_DADOS.Mapeamentos
             builder.Property(u => u.Id).ValueGeneratedOnAdd();
 
             builder.Property(c => c.nome).IsRequired().HasMaxLength(50);
-            builder.Property(c => c.email).IsRequired().HasMaxLength(30);
+            builder.Property(c => c.emailCliente).IsRequired().HasMaxLength(30);
             builder.Property(c => c.estado).IsRequired().HasMaxLength(35);
-            builder.Property(c => c.cpf).IsRequired().HasColumnType("decimal(5,2").IsRequired().HasMaxLength(15);
+            builder.Property(c => c.cpf).IsRequired().HasMaxLength(15);
             builder.Property(c => c.senha).IsRequired().HasMaxLength(15);
             builder.Property(c => c.telefone).IsRequired().HasMaxLength(15);
             builder.Property(c => c.data_adesao).IsRequired().HasMaxLength(15);
