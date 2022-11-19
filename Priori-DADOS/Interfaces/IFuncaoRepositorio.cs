@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Priori_DADOS.Interfaces
 {
-    internal interface IFuncaoRepositorio : IRepositorioGenerico<Funcao>
+    public interface IFuncaoRepositorio : IRepositorioGenerico<Funcao>
     {
         Task AdicionarFuncao(Funcao funcao);
 

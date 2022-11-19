@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Priori_DADOS.Interfaces
 {
-    internal interface IClienteRepositorio : IRepositorioGenerico<tblClientes>
+    public interface IClienteRepositorio : IRepositorioGenerico<tblClientes>
     {
-        Task<int> PegarQuantidadeUsuariosRegistrados();
+        Task<int> PegarQuantidadeClienteRegistrados();
 
         Task<IdentityResult> CriarCliente(tblClientes cliente, string senha);
 

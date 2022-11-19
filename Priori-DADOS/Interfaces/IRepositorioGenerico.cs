@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Priori_DADOS.Interfaces
 {
-    internal interface IRepositorioGenerico<TEntity> where TEntity : class
+    public interface IRepositorioGenerico<TEntity> where TEntity : class
     {
         IQueryable<TEntity> PegarTodos();
 
