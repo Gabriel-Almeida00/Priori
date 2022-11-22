@@ -35,6 +35,11 @@ namespace Priori_DADOS.Repositorios
             }
         }
 
+        public Task AtualizarCliente(tblAgentes clieagentente)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IdentityResult> CriarAgente(tblAgentes agente, string senha)
         {
 
@@ -99,6 +104,11 @@ namespace Priori_DADOS.Repositorios
 
                 throw ex;
             }
+        }
+
+        public Task<IList<string>> PegarFuncoesCliente(tblAgentes agente)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<int> PegarQuantidadeAgenteRegistrados()
