@@ -8,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Priori_DADOS;
+using Priori_DADOS.Repositorios;
+using Priori_DADOS.Interfaces;
 using Priori_OBJ.Models;
 using System;
 using System.Collections.Generic;
@@ -33,6 +35,14 @@ namespace Prior_API
             .UseSqlServer(Configuration.GetConnectionString("ConexaoBD")));
 
             services.AddIdentity<tblClientes, Funcao>().AddEntityFrameworkStores<Contexto>();
+            services.AddIdentity<tblAgentes, Funcao>().AddEntityFrameworkStores<Contexto>();
+
+            services.AddScoped<IFuncaoRepositorio, FuncaoRepostorio>();
+            services.AddScoped<IAgentesRepositorio, AgenteRepositorio>();
+            services.AddScoped<ICarteiraInvestimentosRepositorio, CarteiraInvestimentoRepositorio>();
+            services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
+            services.AddScoped<IInvestimentoRepositorio, InvestimentoRepositorio>();
+            services.AddScoped<ITipoInvestidorRepositorio, TipoInvestidorRepositorio>();
 
             services.AddCors();
 

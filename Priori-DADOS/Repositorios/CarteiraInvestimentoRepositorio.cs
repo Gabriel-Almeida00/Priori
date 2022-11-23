@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Priori_DADOS.Repositorios
 {
-    internal class CarteiraInvestimentoRepositorio : RepositorioGenerico<tblCarteiraInvestimentos>, ICarteiraInvestimentosRepositorio
+    public class CarteiraInvestimentoRepositorio : RepositorioGenerico<tblCarteiraInvestimentos>, ICarteiraInvestimentosRepositorio
     {
         private readonly Contexto _contexto;
         public CarteiraInvestimentoRepositorio(Contexto contexto) : base(contexto)
