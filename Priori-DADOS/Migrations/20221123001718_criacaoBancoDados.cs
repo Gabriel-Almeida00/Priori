@@ -8,7 +8,7 @@ namespace Priori_DADOS.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Funcoes",
+                name: "Funcao",
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
@@ -19,7 +19,7 @@ namespace Priori_DADOS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Funcoes", x => x.Id);
+                    table.PrimaryKey("PK_Funcao", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -69,9 +69,9 @@ namespace Priori_DADOS.Migrations
                 {
                     table.PrimaryKey("PK_AspNetRoleClaims", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AspNetRoleClaims_Funcoes_RoleId",
+                        name: "FK_AspNetRoleClaims_Funcao_RoleId",
                         column: x => x.RoleId,
-                        principalTable: "Funcoes",
+                        principalTable: "Funcao",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -175,9 +175,9 @@ namespace Priori_DADOS.Migrations
                 {
                     table.PrimaryKey("PK_AspNetUserRoles", x => new { x.UserId, x.RoleId });
                     table.ForeignKey(
-                        name: "FK_AspNetUserRoles_Funcoes_RoleId",
+                        name: "FK_AspNetUserRoles_Funcao_RoleId",
                         column: x => x.RoleId,
-                        principalTable: "Funcoes",
+                        principalTable: "Funcao",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -216,6 +216,8 @@ namespace Priori_DADOS.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     id_cliente = table.Column<string>(nullable: false),
                     id_investimento = table.Column<int>(nullable: false),
+                    tipo_investimento = table.Column<string>(nullable: true),
+                    nome_investimento = table.Column<string>(nullable: true),
                     data_efetuacao = table.Column<DateTime>(maxLength: 50, nullable: false),
                     valor_aplicado = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     tempo_aplicacao = table.Column<int>(maxLength: 35, nullable: false),
@@ -240,7 +242,7 @@ namespace Priori_DADOS.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     id_tipoInvestidor = table.Column<int>(nullable: false),
                     id_carteira = table.Column<int>(nullable: false),
-                    nome = table.Column<int>(maxLength: 50, nullable: false),
+                    nome = table.Column<string>(maxLength: 50, nullable: false),
                     tipo_investimento = table.Column<string>(maxLength: 15, nullable: false),
                     rentabilidade = table.Column<string>(maxLength: 15, nullable: false),
                     valor_minimo = table.Column<decimal>(type: "decimal(5,2)", maxLength: 15, nullable: false),
@@ -263,19 +265,19 @@ namespace Priori_DADOS.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Funcoes",
+                table: "Funcao",
                 columns: new[] { "Id", "ConcurrencyStamp", "Descricao", "Name", "NormalizedName" },
-                values: new object[] { "8991b961-c19d-47db-b730-e5c2fbfdd22f", "0948e857-878e-426b-a098-b1b1cccdaafc", "Administrador do sistema", "Administrador", "ADMINISTRADOR" });
+                values: new object[] { "0e0dd920-d7c6-4a7b-bc24-ad4546ea0370", "6e4ba19f-82ae-4559-9fb0-1b431f9e44c7", "Administrador do sistema", "Administrador", "ADMINISTRADOR" });
 
             migrationBuilder.InsertData(
-                table: "Funcoes",
+                table: "Funcao",
                 columns: new[] { "Id", "ConcurrencyStamp", "Descricao", "Name", "NormalizedName" },
-                values: new object[] { "f2916251-d70f-4c28-b0aa-cc2601010280", "027ffdf5-95b2-4a04-b8b6-f7c849003ef9", "Usuário do sistema", "Usuario", "USUARIO" });
+                values: new object[] { "d482ba7e-f9a4-4af5-a37a-9f763553666b", "7aeb79b5-1b32-4474-b727-2e57cf24a1bc", "Usuário do sistema", "Usuario", "USUARIO" });
 
             migrationBuilder.InsertData(
-                table: "Funcoes",
+                table: "Funcao",
                 columns: new[] { "Id", "ConcurrencyStamp", "Descricao", "Name", "NormalizedName" },
-                values: new object[] { "a37c07f3-4669-431c-9d09-fff31016eea8", "725a69e3-1d6d-4f26-a69c-ef10a8353fb4", "Agente do sistema", "Agente", "AGENTE" });
+                values: new object[] { "cf2df2c3-589b-49c7-af20-32a851be24f2", "d79faaa0-6c74-4a9a-97d0-51ebe1c24071", "Agente do sistema", "Agente", "AGENTE" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -299,7 +301,7 @@ namespace Priori_DADOS.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",
-                table: "Funcoes",
+                table: "Funcao",
                 column: "NormalizedName",
                 unique: true,
                 filter: "[NormalizedName] IS NOT NULL");
@@ -369,7 +371,7 @@ namespace Priori_DADOS.Migrations
                 name: "tblInvestimento");
 
             migrationBuilder.DropTable(
-                name: "Funcoes");
+                name: "Funcao");
 
             migrationBuilder.DropTable(
                 name: "tblCarteiraInvestimento");

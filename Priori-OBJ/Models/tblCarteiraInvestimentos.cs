@@ -12,6 +12,9 @@ namespace Priori_OBJ.Models
         public int id_investimento { get; set; }
        
         public virtual ICollection<tblInvestimentos> Investimentos { get; set; }
+
+        public string tipo_investimento { get; set; }
+        public string nome_investimento { get; set; }
         public DateTime data_efetuacao { get; set; }
         public Decimal valor_aplicado { get; set; }
         public int tempo_aplicacao { get; set; }

@@ -10,7 +10,7 @@ using Priori_DADOS;
 namespace Priori_DADOS.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20221119171336_criacaoBancoDados")]
+    [Migration("20221123001718_criacaoBancoDados")]
     partial class criacaoBancoDados
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -155,29 +155,29 @@ namespace Priori_DADOS.Migrations
                         .HasName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("Funcoes");
+                    b.ToTable("Funcao");
 
                     b.HasData(
                         new
                         {
-                            Id = "8991b961-c19d-47db-b730-e5c2fbfdd22f",
-                            ConcurrencyStamp = "0948e857-878e-426b-a098-b1b1cccdaafc",
+                            Id = "0e0dd920-d7c6-4a7b-bc24-ad4546ea0370",
+                            ConcurrencyStamp = "6e4ba19f-82ae-4559-9fb0-1b431f9e44c7",
                             Descricao = "Administrador do sistema",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "f2916251-d70f-4c28-b0aa-cc2601010280",
-                            ConcurrencyStamp = "027ffdf5-95b2-4a04-b8b6-f7c849003ef9",
+                            Id = "d482ba7e-f9a4-4af5-a37a-9f763553666b",
+                            ConcurrencyStamp = "7aeb79b5-1b32-4474-b727-2e57cf24a1bc",
                             Descricao = "Usuário do sistema",
                             Name = "Usuario",
                             NormalizedName = "USUARIO"
                         },
                         new
                         {
-                            Id = "a37c07f3-4669-431c-9d09-fff31016eea8",
-                            ConcurrencyStamp = "725a69e3-1d6d-4f26-a69c-ef10a8353fb4",
+                            Id = "cf2df2c3-589b-49c7-af20-32a851be24f2",
+                            ConcurrencyStamp = "d79faaa0-6c74-4a9a-97d0-51ebe1c24071",
                             Descricao = "Agente do sistema",
                             Name = "Agente",
                             NormalizedName = "AGENTE"
@@ -248,6 +248,9 @@ namespace Priori_DADOS.Migrations
                     b.Property<int>("id_investimento")
                         .HasColumnType("int");
 
+                    b.Property<string>("nome_investimento")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("saldo")
                         .HasColumnType("decimal(5,2)")
                         .HasMaxLength(15);
@@ -255,6 +258,9 @@ namespace Priori_DADOS.Migrations
                     b.Property<int>("tempo_aplicacao")
                         .HasColumnType("int")
                         .HasMaxLength(35);
+
+                    b.Property<string>("tipo_investimento")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("valor_aplicado")
                         .HasColumnType("decimal(5,2)");
@@ -400,8 +406,9 @@ namespace Priori_DADOS.Migrations
                     b.Property<int>("id_tipoInvestidor")
                         .HasColumnType("int");
 
-                    b.Property<int>("nome")
-                        .HasColumnType("int")
+                    b.Property<string>("nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
                     b.Property<string>("rentabilidade")

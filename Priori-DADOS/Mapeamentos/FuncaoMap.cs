@@ -40,7 +40,7 @@ namespace Priori_DADOS.Mapeamentos
                      Descricao = "Agente do sistema"
                  });
 
-            builder.ToTable("Funcoes");
+            builder.ToTable("Funcao");
         }
     }
 }

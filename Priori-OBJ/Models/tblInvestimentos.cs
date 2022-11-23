@@ -12,7 +12,7 @@ namespace Priori_OBJ.Models
 
         public int id_carteira { get; set; } 
          public tblCarteiraInvestimentos carteira { get; set; }
-        public int nome { get; set; }
+        public string nome { get; set; }
         public string tipo_investimento { get; set; }
         public string rentabilidade { get; set; }
         public Decimal valor_minimo { get; set; }
